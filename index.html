@@ -1,40 +1,73 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissor Game</title>
+    <title>Rock Paper Scissor</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Rock Paper Scissor Game</h1>
-    <div class="choices">
-        <div class="choice" id="rock">
-            <img src="rock.png" alt="">
-        </div>
-        <div class="choice" id="paper">
-            <img src="paper.png" alt="">
-        </div>
-        <div class="choice" id="scissor">
-            <img src="scissor.jpg" alt="">
-        </div>
-    </div>
+    <main class="container">
+        <h1>Rock Paper Scissor Game</h1>
+        <section class="instructions">
+            <h2>How to Play</h2>
+            <ul>
+                <li>Select Rock, Paper, or Scissors.</li>
+                <li>The computer will make its choice automatically.</li>
+                <li>Rock beats Scissors.</li>
+                <li>Scissors beats Paper.</li>
+                <li>Paper beats Rock.</li>
+                <li>Win as many rounds as possible and beat your best streak!</li>
+            </ul>
+        </section>
 
-    <div class="score-board">
-        <div class="score">
-            <p id="user-score">0</p>
-            <p>You</p>
-        </div>
-        <div class="score">
-            <p id="comp-score">0</p>
-            <p>Computer</p>
-        </div>
-    </div>
+        <section class="choices">
+            <button class="choice" id="rock">
+                <img src="rock.png" alt="Rock">
+            </button>
+            <button class="choice" id="paper">
+                <img src="paper.png" alt="Paper">
+            </button>
+            <button class="choice" id="scissors">
+                <img src="scissor.jpg" alt="Scissors">
+            </button>
+        </section>
 
-    <div class="msg-container">
-        <p id="msg">Play your move</p>
-    </div>
+        <section class="score-board">
+            <div class="score">
+                <p id="user-score">0</p>
+                <p>You</p>
+            </div>
+            <div class="score">
+                <p id="comp-score">0</p>
+                <p>Computer</p>
+            </div>
+        </section>
 
+        <!-- <div class="msg-container">
+            <p id="msg">Play your move</p>
+        </div> -->
+
+        <section class="msg-container">
+            <p id="msg">Play your move</p>
+        </section>
+
+        <!-- <section class="round-info">
+            <p>Your Choice: <span id="user-choice">-</span></p>
+            <p>Computer Choice: <span id="comp-choice">-</span></p>
+        </section>
+
+        <section class="stats">
+            <p>Games Played: <span id="games-played">0</span></p>
+            <p>Best Streak: <span id="best-streak">0</span></p>
+        </section>
+
+        <button id="reset-btn" type="button">Reset Score</button> -->
+    </main>
+
+    <footer>
+        <p>Made by Pranjal Srivastava</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
