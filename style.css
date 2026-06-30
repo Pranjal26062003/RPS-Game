@@ -1,69 +1,131 @@
 * {
     margin: 0;
     padding: 0;
-    text-align: center;
+    box-sizing:border-box;
 }
+
+body {
+    text-align:center;
+    background: #f4f6f9;
+    font-family: Arial, sans-serif;
+}
+
+/* .container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.1);
+
+    overflow: hidden;
+    
+} */
 
 h1 {
     background-color: #081b31;
-    color: #fff;
+    color: white;
     height: 5rem;
     line-height: 5rem;
+    margin-bottom: 2rem;
+}
+
+.instructions {
+    /* width: 80%; */
+    max-width:700px;
+    margin:0 auto 2rem;
+    /* margin: 0 auto 2rem;
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08); */
+}
+
+.instructions h2 {
+    margin-bottom: 1rem;
+    color: #081b31;
+    /* align-items: start; */
+}
+
+.instructions ul {
+    list-style-position: inside;
+}
+
+.instructions li {
+    margin: 0.5rem 0;
 }
 
 .choice {
-    height: 165px;
-    width: 165px;
+    height: 170px;
+    width: 170px;
+    border: none;
     border-radius: 50%;
+    background: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                background-color .3s ease;
     /* transition-property: all;
     transition-duration: 4s;
     transition-delay: 2s; */
-    
 }
 
 .choice:hover {
-    
-    cursor: pointer;
-
+    /* cursor: pointer; */
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(0,0,0,.2);
     /* all: 200px;  */
     /* transform: scale(1.5); */
     /* transition: 1 sec; */
     /* opacity: 0.5; */
     /* zoom: 0.4; */
     /* background-color: #081b31; */
-   
 }
 
-img {
+.choice img {
     height: 150px;
     width: 150px;
     object-fit: cover;
     border-radius: 50%;
 }
 
-img:hover {
+/* img:hover {
     height: 180px;
     width: 180px;
-} 
+}  */
 
 .choices {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5rem;
-    margin-top: 5rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 3rem;
 }
 
 .score-board {
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center;
     font-size: 2rem;
+    margin-top: 3rem; */
+    gap: 6rem;
     margin-top: 3rem;
-    gap: 5rem;
+}
+
+.score p:first-child {
+    font-size: 4rem;
+    font-weight: bold;
+}
+.score {
+    background: white;
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
 }
 
 #user-score,
@@ -72,19 +134,95 @@ img:hover {
 }
 
 .msg-container {
-
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 #msg {
     /* margin-top: 5rem; */
     background-color: #081b31;
-    color: #fff;
-    font-size: 2rem;
-    display: inline;
-    padding: 1rem;
-    border-radius: 1rem;
+    color: white;
+    font-size: 1.3rem;
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+}
 
+/* .round-info {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    color: #333;
+}
 
+.stats {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    font-weight: bold;
+    color: #081b31;
+} 
 
+#reset-btn {
+    margin-top: 2rem;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    background: #081b31;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#reset-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+} */
+
+footer{
+    margin-top:40px;
+    padding:20px;
+    background:#081b31;
+    color:white;
+}
+
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .choices {
+        gap: 1rem;
+    }
+
+    .choice {
+        width: 120px;
+        height: 120px;
+    }
+
+    img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .instructions {
+        width: 95%;
+    }
+
+    .score-board {
+        gap: 1rem;
+    }
+
+    .round-info,
+    .stats {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+     .score {
+        padding: 1rem;
+    }
 }
